@@ -1,0 +1,162 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    tools:context=".ShowInfo">
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/project_name1"
+            android:text="Project Name:"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_column="1"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/project_name2"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_column="1" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/categories1"
+            android:text="Category:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:textStyle="bold" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/categories2"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_column="1"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/affiliated_agency1"
+            android:text="Affiliated Agencies:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:textStyle="bold" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/affiliated_agency2"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_column="1"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/description1"
+            android:text="Description:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:textStyle="bold" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/description2"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_column="1"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/project_start_time1"
+            android:text="Project Start Time:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:textStyle="bold" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/project_start_time2"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_column="1"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/project_completion_time1"
+            android:text="Project Completion Time:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:textStyle="bold" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/project_completion_time2"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_column="1"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:id="@+id/total_budget1"
+            android:text="Total Budget:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:textStyle="bold" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/total_budget2"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_column="1"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/completion_percentage1"
+            android:text="Completion Percentage:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:textStyle="bold" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/completion_percentage2"
+            android:layout_width="379dp"
+            android:layout_height="match_parent"
+            android:layout_column="1"/>
+    </TableRow>
+
+
+</TableLayout>
