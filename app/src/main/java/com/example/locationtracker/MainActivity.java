@@ -49,8 +49,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     GoogleMap mGoogleMap;
     private FusedLocationProviderClient mLocationClient;
     private int GPS_REQUEST_CODE = 9001;
-    private String currentLatitude;
-    private String currentLongitude;
+    private String currentLatitude = ""+ 23.729211164246585;
+    private String currentLongitude = ""+ 90.40874895549243;
 
 
     public static Integer id;
@@ -270,12 +270,6 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             Marker mk = mMap.addMarker(new MarkerOptions().position(locations.get(i)).title(categories.get(locationIndex.get(i))));
             mk.setTag(locationIndex.get(i));
             Integer id = (Integer) mk.getTag();
-
-            // below lin is use to zoom our camera on map.
-            //mMap.animateCamera(CameraUpdateFactory.zoomTo(18.0f));
-
-            // below line is use to move our camera to the specific location.
-            //mMap.moveCamera(CameraUpdateFactory.newLatLng(locations.get(i)));
         }
 
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
@@ -283,7 +277,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             public boolean onMarkerClick(Marker marker) {
                 id = (Integer) marker.getTag();
                 startActivity(new Intent(MainActivity.this, ShowInfo.class));
-                Log.i("Mashrafi", id + "");
+                //Log.i("Mashrafi", id + "");
                 return false;
             }
         });
@@ -346,7 +340,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
     private void gotoLocation(double latitude, double longitude) {
         LatLng LatLng = new LatLng(latitude, longitude);
 
-        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(LatLng, 14);
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(LatLng, 13);
         mGoogleMap.moveCamera(cameraUpdate);
         mGoogleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
     }
@@ -357,14 +351,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onPermissionGranted(PermissionGrantedResponse permissionGrantedResponse) {
                 isPermissionGranted = true;
+                initMap();
+                //markCurrLoc();
             }
 
             @Override
             public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
                 Intent intent = new Intent();
                 intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                Uri uri = Uri.fromParts("package", getPackageName(), "");
-                intent.setData(uri);
                 startActivity(intent);
             }
 
